@@ -1,0 +1,20 @@
+{
+  "name": "persona-library-marketplace",
+  "interface": {
+    "displayName": "Persona Library Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "persona-library-plugin",
+      "source": {
+        "source": "local",
+        "path": "./plugins/persona-library-plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
