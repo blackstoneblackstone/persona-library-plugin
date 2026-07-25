@@ -71,6 +71,7 @@ const searchInput = document.querySelector("#searchInput");
 const emptyState = document.querySelector("#emptyState");
 const personaCount = document.querySelector("#personaCount");
 const toast = document.querySelector("#toast");
+const installMarketButton = document.querySelector("#installMarketButton");
 
 const categories = ["全部", ...new Set(personas.map((persona) => persona.category))];
 let activeCategory = "全部";
@@ -98,6 +99,16 @@ function usePersona(persona) {
   const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
   window.open(url, "_blank", "noopener,noreferrer");
   showToast("调用语句已复制，正在打开 ChatGPT");
+}
+
+async function copyInstallCommands() {
+  const commands = [
+    "git clone https://github.com/blackstoneblackstone/persona-library-plugin.git",
+    "codex plugin marketplace add ./persona-library-plugin",
+    "codex plugin add persona-library-plugin@persona-library-marketplace",
+  ].join("\n");
+  await navigator.clipboard.writeText(commands);
+  showToast("市场安装命令已复制");
 }
 
 function renderFilters() {
@@ -166,5 +177,6 @@ function renderCards() {
 }
 
 searchInput.addEventListener("input", renderCards);
+installMarketButton.addEventListener("click", copyInstallCommands);
 renderFilters();
 renderCards();
