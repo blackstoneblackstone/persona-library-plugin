@@ -1,0 +1,25 @@
+{
+  "name": "persona-library-plugin",
+  "version": "0.1.0",
+  "description": "A curated library of specialized Chinese-language personas for writing, presentations, knowledge translation, assessment, and content creation.",
+  "author": {
+    "name": "Steven Lee"
+  },
+  "homepage": "https://github.com/blackstoneblackstone/persona-library-plugin",
+  "repository": "https://github.com/blackstoneblackstone/persona-library-plugin",
+  "keywords": ["persona", "writing", "presentation", "chinese", "productivity"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Persona Library Plugin",
+    "shortDescription": "Choose and use specialized expert personas.",
+    "longDescription": "A growing persona library that routes tasks to focused expert roles while keeping each persona's voice, workflow, output contract, and safety boundaries independent.",
+    "developerName": "Steven Lee",
+    "category": "Productivity",
+    "capabilities": ["persona-routing", "writing", "presentations", "analysis"],
+    "defaultPrompt": [
+      "为我的任务选择最适合的人格并直接开始。",
+      "列出 Persona Library 中的全部人格。",
+      "组合两个合适的人格完成这项任务。"
+    ]
+  }
+}
