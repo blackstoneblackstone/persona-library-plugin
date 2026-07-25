@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Persona Library — 为写作、演讲、科普、成长与短视频任务选择最合适的专家人格。"
+    />
+    <title>Persona Library</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Persona Library 首页">
+        <span class="brand-mark">P</span>
+        <span>Persona Library</span>
+      </a>
+      <div class="header-actions">
+        <span class="persona-count" id="personaCount"></span>
+        <a
+          class="github-link"
+          href="https://github.com/blackstoneblackstone/persona-library-plugin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">PERSONA LIBRARY · 01</p>
+        <div class="hero-grid">
+          <h1>不是一个 AI。<br />是一支专家团队。</h1>
+          <div class="hero-copy">
+            <p>
+              为不同任务选择不同的大脑。每个人格拥有独立的方法、表达方式与输出标准。
+            </p>
+            <label class="search">
+              <span aria-hidden="true">⌕</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="搜索人格、能力或场景"
+                autocomplete="off"
+              />
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <nav class="filters" id="filters" aria-label="人格分类"></nav>
+      <section class="persona-grid" id="personaGrid" aria-live="polite"></section>
+      <p class="empty-state" id="emptyState" hidden>
+        没有找到匹配的人格，换个关键词试试。
+      </p>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./portraits.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
