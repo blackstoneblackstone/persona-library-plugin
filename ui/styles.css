@@ -87,6 +87,21 @@ input {
   border-bottom: 1px solid currentColor;
 }
 
+.install-market-button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 999px;
+  color: white;
+  background: var(--blue);
+  font-size: 13px;
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.install-market-button:hover {
+  background: var(--ink);
+}
+
 main {
   width: min(1500px, 100%);
   margin: 0 auto;
